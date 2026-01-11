@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 00:16:21 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/11 02:59:22 by muaktas          ###   ########.fr       */
+/*   Created: 2026/01/11 04:03:38 by muaktas           #+#    #+#             */
+/*   Updated: 2026/01/11 05:12:46 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int				i;
-	unsigned char	*src;
-
-	i = 0;
-	src = (unsigned char *)s;
-	while (i < n)
-	{
-		src[i] = '\0';
-		i++;
-	}
 }

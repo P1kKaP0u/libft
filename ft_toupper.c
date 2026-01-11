@@ -3,25 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 16:19:23 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/10 16:48:46 by mustafa          ###   ########.fr       */
+/*   Updated: 2026/01/11 02:49:06 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (97 <= c && c <= 122)
-    {
-        c -=32;
-    }
-    return(c);
-}
-
-int main()
-{
-    printf("%c" ,ft_toupper('z'));
+	if (97 <= c && c <= 122)
+	{
+		c -= 32;
+	}
+	return (c);
 }

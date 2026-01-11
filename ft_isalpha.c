@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 00:16:21 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/11 02:59:22 by muaktas          ###   ########.fr       */
+/*   Created: 2026/01/05 11:49:17 by muaktas           #+#    #+#             */
+/*   Updated: 2026/01/05 12:56:55 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_isalpha(int c)
 {
-	int				i;
-	unsigned char	*src;
-
-	i = 0;
-	src = (unsigned char *)s;
-	while (i < n)
+	if ((65 <= c && c <= 90) || (97 <= c && c <= 122))
 	{
-		src[i] = '\0';
-		i++;
+		return (1);
 	}
+	else
+		return (0);
 }

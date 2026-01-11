@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lowecase.c                                      :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 16:45:39 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/10 16:48:39 by mustafa          ###   ########.fr       */
+/*   Updated: 2026/01/11 02:49:33 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (65 <= c && c <=90)
-    {
-        c +=32;
-    }
-    return(c);
-}
-
-int main()
-{
-    printf("%c" ,ft_tolower('Z'));
+	if (65 <= c && c <= 90)
+	{
+		c += 32;
+	}
+	return (c);
 }
