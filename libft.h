@@ -3,17 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 12:34:42 by muaktas           #+#    #+#             */
-/*   Updated: 2026/01/11 07:44:33 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/01/13 00:29:04 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#define NULL '\0'
+#define NULL 0
+#define SIZE_MAX 2147483647
+#include <stdlib.h>
 typedef __SIZE_TYPE__ size_t;
+
+
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
