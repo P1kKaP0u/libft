@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 01:14:09 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/17 15:57:46 by muaktas          ###   ########.fr       */
+/*   Created: 2026/01/17 12:57:28 by muaktas           #+#    #+#             */
+/*   Updated: 2026/01/17 15:38:11 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	int				i;
-	unsigned int	length_src;
+// char	*ft_strtrim(char const *s1, char const *set)
+// {
+// 	char	*new_string;
+// 	size_t	new_string_len;
+// 	size_t	i;
+// 	size_t	j;
 
-	i = 0;
-	length_src = ft_strlen(src);
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (size > 0)
-		dst[i] = '\0';
-	return (length_src);
-}
+// 	new_string_len = ft_strlen(s1) + 1;
+// 	new_string = (char *)malloc(new_string_len);
+// 	if (new_string == NULL)
+// 	{
+// 		return (NULL);
+// 	}
+// 	i = 0;
+// 	while (s1[i] != '\0')
+// 	{
+
+// 	}
+
+
+// 	return (new_string);
+// }

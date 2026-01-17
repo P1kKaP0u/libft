@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
+/*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 01:14:09 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/17 15:57:46 by muaktas          ###   ########.fr       */
+/*   Created: 2026/01/13 13:53:11 by muaktas           #+#    #+#             */
+/*   Updated: 2026/01/13 14:07:15 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	int				i;
-	unsigned int	length_src;
+	size_t	s_leng;
+	void	*ptr;
 
-	i = 0;
-	length_src = ft_strlen(src);
-	while (src[i] != '\0' && i < size - 1)
+	s_leng = ft_strlen(s);
+	ptr = malloc(s_leng);
+	if (ptr == NULL)
 	{
-		dst[i] = src[i];
-		i++;
+		return (NULL);
 	}
-	if (size > 0)
-		dst[i] = '\0';
-	return (length_src);
+	return ((char *)ft_memcpy(ptr, s, s_leng));
 }

@@ -3,29 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
+/*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 22:50:06 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/13 00:32:41 by mustafa          ###   ########.fr       */
+/*   Updated: 2026/01/17 15:56:08 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	byte;
 
-	if (byte == 0 && nmemb * size > SIZE_MAX)
+	if ((size != 0 || nmemb > SIZE_MAX / size))
 	{
 		return (NULL);
 	}
 	byte = nmemb * size;
 	ptr = malloc(byte);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 	ft_bzero(ptr, byte);
 	return (ptr);
 }

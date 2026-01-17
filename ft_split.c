@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 01:14:09 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/17 15:57:46 by muaktas          ###   ########.fr       */
+/*   Created: 2026/01/17 15:39:03 by muaktas           #+#    #+#             */
+/*   Updated: 2026/01/17 15:39:18 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	**ft_split(char const *s, char c)
 {
-	int				i;
-	unsigned int	length_src;
 
-	i = 0;
-	length_src = ft_strlen(src);
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (size > 0)
-		dst[i] = '\0';
-	return (length_src);
 }
