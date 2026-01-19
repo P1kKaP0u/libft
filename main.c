@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 12:42:08 by muaktas           #+#    #+#             */
-/*   Updated: 2026/01/06 16:26:29 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/01/19 23:25:24 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,9 @@
 
 int main()
 {
-    //printf("%d", ft_isalpha('*'));
-	//printf("%d", ft_isdigit('a'));
-	// printf("%d", ft_isalnum('a'));
-	// printf("%d", ft_isalnum('F'));
-	// printf("%d", ft_isalnum(9));
-	// printf("%d", ft_isprint(""));
-	char s[] = " mustafa 12 /";
-	// printf("%ld", ft_strlen(s));
-	ft_memset(s, 'A', 10);
-	printf("%s", s);
+	char s1[20] = "..mustafakemal..";
+	char s2[10] = "..";
+	ft_strtrim(s1,s2);
+	printf("%s", s1);
 
 }

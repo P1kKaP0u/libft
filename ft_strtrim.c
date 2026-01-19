@@ -3,53 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
+/*   By: mustafa <mustafa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 12:57:28 by muaktas           #+#    #+#             */
-/*   Updated: 2026/01/17 21:27:52 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/01/20 00:50:49 by mustafa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static void	ft_index_finder(char const *s1, char const *set)
+static size_t	check_char_in_set(char const *set, char c)
 {
-	size_t	start_index;
-	size_t	last_index;
+	size_t	i;
 
-
-
-
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new_string;
-	size_t	string_len;
+	char	*new_str;
+	size_t	new_str_len;
 	size_t	start_index;
-	size_t	j;
-	size_t	set_last;
+	size_t	end_index;
 
-	j = 0;
 	start_index = 0;
-	string_len = ft_strlen(s1);
-	set_last = ft_strlen(set);
-	new_string = (char *)malloc(string_len + 1);
-	if (new_string == NULL)
-		return (NULL);
-	while (set[j] && s1 && s1[start_index] == set[j])
+	end_index = ft_strlen(s1);
+	while (s1[start_index] && check_char_in_set(set, s1[start_index]))
 	{
 		start_index++;
-		j++;
 	}
-	while (s1 && s1[string_len - 1] == set[set_last -1])
+	while (end_index > start_index
+		&& check_char_in_set(set, s1[end_index -1]))
 	{
-		string_len--;
-		set_last--;
+		end_index--;
 	}
-	ft_strlcpy(new_string, &s1[start_index], string_len - start_index + 2);
-	return (new_string);
+	new_str_len = end_index - start_index;
+	new_str = (char *)malloc(new_str_len + 1);
+	if (new_str == NULL)
+	{
+		return (NULL);
+	}
+	ft_strlcpy(new_str, &s1[start_index], new_str_len + 1);
+	return (new_str);
 }
-
-
