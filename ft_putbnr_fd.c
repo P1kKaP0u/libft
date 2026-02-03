@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putbnr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 12:42:08 by muaktas           #+#    #+#             */
-/*   Updated: 2026/01/17 21:24:21 by muaktas          ###   ########.fr       */
+/*   Created: 2026/01/29 04:51:22 by muaktas           #+#    #+#             */
+/*   Updated: 2026/01/29 05:05:35 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <string.h>
 
-
-int main()
+void	ft_putnbr_fd(int n, int fd)
 {
-	char s1[20] = "...must.afa...";
-	char s2[10] = "..";
+	long	number;
 
-	printf("%s", ft_strtrim(s1,s2));
+	number = (long)n;
+	if (number < 0)
+	{
+		ft_putchar_fd('-', fd);
+		number = -number;
+	}
+	if (0 <= number && number <= 9)
+	{
+		ft_putchar_fd(number + '0', fd);
+	}
+	else
+	{
+		ft_putnbr_fd(number / 10, fd);
+		ft_putnbr_fd(number % 10, fd);
+	}
 }

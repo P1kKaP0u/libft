@@ -6,7 +6,7 @@
 /*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 06:30:56 by muaktas           #+#    #+#             */
-/*   Updated: 2026/01/11 06:40:32 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/01/13 14:41:31 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 

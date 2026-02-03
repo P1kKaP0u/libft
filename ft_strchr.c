@@ -6,7 +6,7 @@
 /*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:08:28 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/11 02:47:21 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/01/13 14:39:34 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	int	lenght_of_src;
+	size_t	i;
+	size_t	lenght_of_src;
 
 	i = 0;
 	lenght_of_src = ft_strlen(s) + 1;

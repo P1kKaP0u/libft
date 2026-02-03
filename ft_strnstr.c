@@ -6,7 +6,7 @@
 /*   By: muaktas <muaktas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 20:21:37 by mustafa           #+#    #+#             */
-/*   Updated: 2026/01/11 02:54:40 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/01/13 14:07:40 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (big[i] != '\0' && i < len)
