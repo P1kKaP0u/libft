@@ -6,7 +6,7 @@
 /*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:39:03 by muaktas           #+#    #+#             */
-/*   Updated: 2026/02/02 22:16:40 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/02/05 17:41:33 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static int	word_size(char const *s, char c)
 
 	i = 0;
 	in_word = 0;
+	word_size = 0;
 	while (s[i])
 	{
 		if (s[i] != c && !in_word)
@@ -71,7 +72,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	splitted_s = (char **)malloc(word_size(s, c) * sizeof(char *));
+	splitted_s = (char **)malloc((word_size(s, c) + 1) * sizeof(char *));
 	if (!splitted_s)
 		return (NULL);
 	while (s[i])
@@ -82,8 +83,8 @@ char	**ft_split(char const *s, char c)
 			break ;
 		len = word_length_counter(&s[i], c);
 		splitted_s[j] = ft_substr(&s[i], 0, len);
-		if (!splitted_s)
-			return (NULL);
+		if (!splitted_s[j])
+			return (free_filled(splitted_s), NULL);
 		i += len;
 		j++;
 	}

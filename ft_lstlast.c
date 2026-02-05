@@ -6,7 +6,7 @@
 /*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 02:00:30 by muaktas           #+#    #+#             */
-/*   Updated: 2026/02/03 03:07:03 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/02/04 18:40:05 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,36 +27,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (current);
 }
-
-// int main()
-// {
-// 	t_list *head;
-// 	t_list *head2;
-// 	t_list n1,n2,n3;
-// 	int a = 23 , b = 54, c = 12;
-
-// 	n1.content = &a;
-// 	n2.content = &b;
-// 	n3.content = &c;
-
-// 	head = &n1;
-// 	n1.next = &n2;
-// 	n2.next	= &n3;
-// 	n3.next = NULL;
-// 	head2 = head;
-// 	while (head != NULL)
-// 	{
-// 		printf("%d-", *(int *)head->content);
-// 		head = head->next;
-// 	}
-// 	head = head2;
-// 	head2 = ft_lstlast(head);
-// 	if (head2)
-// 	{
-// 		printf("\nLAST ITEM address %p", (void *)head2);
-// 		printf("\nLAST ITEM content %d", *(int *)head2->content);
-// 	}
-// 	else
-// 		printf("\nNOTHING");
-
-// }

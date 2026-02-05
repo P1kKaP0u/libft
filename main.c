@@ -6,7 +6,7 @@
 /*   By: muaktas <muaktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 12:42:08 by muaktas           #+#    #+#             */
-/*   Updated: 2026/01/17 21:24:21 by muaktas          ###   ########.fr       */
+/*   Updated: 2026/02/05 16:33:01 by muaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 int main()
 {
-	char s1[20] = "...must.afa...";
-	char s2[10] = "..";
-
-	printf("%s", ft_strtrim(s1,s2));
+	char dest[20];
+	int a = ft_atoi("-486");
+	printf("%d", a);
 }
+
